@@ -1,8 +1,7 @@
 /*!
 ICanHaz.js version 0.9 -- by @HenrikJoreteg
 More info at: http://icanhazjs.com
-*/
-(function ($) {
+*/(function ($) {
 /*!
   mustache.js -- Logic-less templates in JavaScript
 
@@ -395,7 +394,13 @@ function ICanHaz() {
 window.ich = new ICanHaz();
 
 // init itself on document ready
-$(function () {
-    ich.grabTemplates();
-});
-})(window.jQuery || window.Zepto);
+if (window.jQuery || window.Zepto) {
+    $(function () {
+        ich.grabTemplates();
+    });
+}
+if (window.ender) {
+    $.domReady(function () {
+        ich.grabTemplates();
+    });
+}})(window.jQuery || window.Zepto || window.ender);
