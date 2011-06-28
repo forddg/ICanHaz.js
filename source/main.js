@@ -65,6 +65,13 @@ function ICanHaz() {
 window.ich = new ICanHaz();
 
 // init itself on document ready
-$(function () {
-    ich.grabTemplates();
-});
+if (window.jQuery || window.Zepto) {
+    $(function () {
+        ich.grabTemplates();
+    });
+}
+if (window.ender) {
+    $.domReady(function () {
+        ich.grabTemplates();
+    });
+}
