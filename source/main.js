@@ -65,12 +65,14 @@ function ICanHaz() {
 window.ich = new ICanHaz();
 
 // init itself on document ready
-if (window.jQuery || window.Zepto) {
-    $(function () {
-        ich.grabTemplates();
-    });
-}
-if (window.ender) {
+
+// Fires if jQuery or Zepto
+$(function () {
+    ich.grabTemplates();
+});
+
+// Fires if using jeesh's domready (https://github.com/ded/domready)
+if ($.domReady !== undefined) {
     $.domReady(function () {
         ich.grabTemplates();
     });
