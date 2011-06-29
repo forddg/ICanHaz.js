@@ -1,4 +1,6 @@
-                                                                                          
+This fork adds basic support for [The Jeesh](https://github.com/ender-js/jeesh) to
+
+                                                                                         
     _/_/_/    _/_/_/                      _/    _/                          _/            
      _/    _/          _/_/_/  _/_/_/    _/    _/    _/_/_/  _/_/_/_/            _/_/_/   
     _/    _/        _/    _/  _/    _/  _/_/_/_/  _/    _/      _/        _/  _/_/        
@@ -15,6 +17,3 @@ ICanHaz.js includes janl's mustache.js (https://github.com/janl/mustache.js/). M
 
 To get started, read the documentation: http://icanhazjs.com
 
-// =================================================
-
-Includes The Jeesh compiled source (http://ender-js.s3.amazonaws.com/jeesh.min.js)
